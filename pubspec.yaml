@@ -44,7 +44,6 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_launcher_icons: ^0.13.1
-  flutter_launcher_name: ^0.0.1
 
 flutter:
   uses-material-design: true
@@ -58,7 +57,4 @@ flutter_icons:
   image_path: "assets/icons/app_icon.png"
   adaptive_icon_background: "#F5E6D3"
   adaptive_icon_foreground: "assets/icons/app_icon.png"
-
-flutter_launcher_name:
-  name: "Muktar Marangoz"
 
