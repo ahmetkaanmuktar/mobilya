@@ -35,14 +35,11 @@ jobs:
       run: flutter pub get
     
     - name: Flutter Analyze
-      run: flutter analyze --no-fatal-infos
+      run: flutter analyze
       continue-on-error: true
     
     - name: Gradle Wrapper İzinlerini Ayarla
       run: chmod +x android/gradlew
-    
-    - name: Android License Kabul
-      run: yes | flutter doctor --android-licenses || true
     
     - name: Flutter Clean
       run: flutter clean
@@ -51,7 +48,7 @@ jobs:
       run: flutter pub get
     
     - name: APK Oluştur
-      run: flutter build apk --release --verbose --no-shrink
+      run: flutter build apk --release --no-shrink
     
     - name: APK'yı Yükle
       uses: actions/upload-artifact@v4
