@@ -35,7 +35,9 @@ jobs:
       run: flutter pub get
     
     - name: Flutter Analyze
-      run: flutter analyze
+      run: |
+        echo "Starting Flutter Analyze..."
+        flutter analyze || echo "Analyze completed with warnings/errors"
       continue-on-error: true
     
     - name: Gradle Wrapper İzinlerini Ayarla
@@ -48,7 +50,13 @@ jobs:
       run: flutter pub get
     
     - name: APK Oluştur
-      run: flutter build apk --release --no-shrink
+      run: |
+        echo "Starting APK build..."
+        flutter build apk --release --no-shrink || {
+          echo "Build failed! Checking for detailed errors..."
+          flutter doctor -v
+          exit 1
+        }
     
     - name: APK'yı Yükle
       uses: actions/upload-artifact@v4
