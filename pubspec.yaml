@@ -1,0 +1,64 @@
+name: muktar_marangoz
+description: MDF kesim hesaplama ve fatura uygulaması
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # UI Components
+  cupertino_icons: ^1.0.2
+  google_fonts: ^6.1.0
+  
+  # State Management
+  provider: ^6.1.1
+  
+  # Local Storage
+  shared_preferences: ^2.2.2
+  sqflite: ^2.3.0
+  path_provider: ^2.1.1
+  
+  # PDF Generation
+  pdf: ^3.10.7
+  printing: ^5.11.1
+  
+  # Share & File Handling
+  share_plus: ^7.2.1
+  path: ^1.8.3
+  
+  # Speech Recognition
+  speech_to_text: ^6.6.0
+  permission_handler: ^11.1.0
+  
+  # Date & Time
+  intl: ^0.18.1
+  
+  # UUID
+  uuid: ^4.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+  flutter_launcher_name: ^0.0.1
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/icons/
+
+flutter_icons:
+  android: true
+  ios: false
+  image_path: "assets/icons/app_icon.png"
+  adaptive_icon_background: "#F5E6D3"
+  adaptive_icon_foreground: "assets/icons/app_icon.png"
+
+flutter_launcher_name:
+  name: "Muktar Marangoz"
+
