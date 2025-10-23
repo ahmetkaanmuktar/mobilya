@@ -1,11 +1,11 @@
 class AppConstants {
   // Tabaka Ölçüleri
-  static const double defaultSheetWidth = 2800.0; // mm
-  static const double defaultSheetHeight = 2100.0; // mm
+  static const double defaultSheetWidth = 2800.0; // mm (140 cm)
+  static const double defaultSheetHeight = 2100.0; // mm (210 cm)
   
   // Minimum ve Maximum Değerler
-  static const double minPieceSize = 50.0; // mm
-  static const double maxPieceSize = 3000.0; // mm
+  static const double minPieceSize = 50.0; // mm (5 cm)
+  static const double maxPieceSize = 3000.0; // mm (300 cm)
   
   // Uygulama Bilgileri
   static const String appName = 'Muktar Marangoz';

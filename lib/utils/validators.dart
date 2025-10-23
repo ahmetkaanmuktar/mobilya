@@ -13,11 +13,11 @@ class Validators {
     }
     
     if (number < AppConstants.minPieceSize) {
-      return '$fieldName minimum ${AppConstants.minPieceSize} mm olmalıdır';
+      return '$fieldName minimum ${(AppConstants.minPieceSize / 10).toStringAsFixed(1)} cm olmalıdır';
     }
     
     if (number > AppConstants.maxPieceSize) {
-      return '$fieldName maximum ${AppConstants.maxPieceSize} mm olmalıdır';
+      return '$fieldName maximum ${(AppConstants.maxPieceSize / 10).toStringAsFixed(1)} cm olmalıdır';
     }
     
     return null;

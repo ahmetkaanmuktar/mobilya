@@ -132,13 +132,13 @@ class _CuttingPlanScreenState extends State<CuttingPlanScreen> {
               children: [
                 TextField(
                   controller: widthCtrl,
-                  decoration: const InputDecoration(labelText: 'En (mm)'),
+                  decoration: const InputDecoration(labelText: 'En (cm)'),
                   keyboardType: TextInputType.number,
                 ),
                 const SizedBox(height: 12),
                 TextField(
                   controller: heightCtrl,
-                  decoration: const InputDecoration(labelText: 'Boy (mm)'),
+                  decoration: const InputDecoration(labelText: 'Boy (cm)'),
                   keyboardType: TextInputType.number,
                 ),
                 const SizedBox(height: 12),
@@ -233,7 +233,7 @@ class _CuttingPlanScreenState extends State<CuttingPlanScreen> {
                         const Icon(Icons.dashboard, color: AppTheme.primaryWood),
                         const SizedBox(width: 8),
                         Text(
-                          'Tabaka Ölçüsü: ${provider.currentPlan!.sheetWidth.toInt()} x ${provider.currentPlan!.sheetHeight.toInt()} mm',
+                          'Tabaka Ölçüsü: ${(provider.currentPlan!.sheetWidth / 10).toStringAsFixed(1)} x ${(provider.currentPlan!.sheetHeight / 10).toStringAsFixed(1)} cm',
                           style: Theme.of(context).textTheme.titleMedium,
                         ),
                       ],
@@ -262,7 +262,7 @@ class _CuttingPlanScreenState extends State<CuttingPlanScreen> {
                             child: TextFormField(
                               controller: _widthController,
                               decoration: InputDecoration(
-                                labelText: 'En (mm)',
+                                labelText: 'En (cm)',
                                 prefixIcon: const Icon(Icons.straighten),
                                 suffixIcon: IconButton(
                                   icon: Icon(
@@ -296,7 +296,7 @@ class _CuttingPlanScreenState extends State<CuttingPlanScreen> {
                             child: TextFormField(
                               controller: _heightController,
                               decoration: InputDecoration(
-                                labelText: 'Boy (mm)',
+                                labelText: 'Boy (cm)',
                                 prefixIcon: const Icon(Icons.height),
                                 suffixIcon: IconButton(
                                   icon: Icon(
@@ -441,7 +441,7 @@ class _CuttingPlanScreenState extends State<CuttingPlanScreen> {
                                 ),
                               ),
                               title: Text(
-                                '${piece.width.toInt()} x ${piece.height.toInt()} mm',
+                                '${(piece.width / 10).toStringAsFixed(1)} x ${(piece.height / 10).toStringAsFixed(1)} cm',
                                 style: const TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 16,

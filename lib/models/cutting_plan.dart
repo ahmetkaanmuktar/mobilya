@@ -5,8 +5,8 @@ class CuttingPlan {
   final String customerName;
   final DateTime createdAt;
   final List<Piece> pieces;
-  final double sheetWidth; // Tabaka eni (mm)
-  final double sheetHeight; // Tabaka boyu (mm)
+  final double sheetWidth; // Tabaka eni (mm - içeride cm olarak gösterilir)
+  final double sheetHeight; // Tabaka boyu (mm - içeride cm olarak gösterilir)
   final String? notes;
   
   CuttingPlan({

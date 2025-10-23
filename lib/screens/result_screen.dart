@@ -217,7 +217,7 @@ Detaylı kesim listesi PDF'te mevcuttur.
                               ),
                               const SizedBox(height: 8),
                               Text(
-                                '${plan.sheetWidth.toInt()} x ${plan.sheetHeight.toInt()} mm',
+                                '${(plan.sheetWidth / 10).toStringAsFixed(1)} x ${(plan.sheetHeight / 10).toStringAsFixed(1)} cm',
                                 style: const TextStyle(
                                   color: Colors.white70,
                                   fontSize: 14,
@@ -333,7 +333,7 @@ Detaylı kesim listesi PDF'te mevcuttur.
                                 ),
                               ),
                               title: Text(
-                                '${piece.width.toInt()} x ${piece.height.toInt()} mm',
+                                '${(piece.width / 10).toStringAsFixed(1)} x ${(piece.height / 10).toStringAsFixed(1)} cm',
                                 style: const TextStyle(
                                   fontWeight: FontWeight.bold,
                                 ),

@@ -77,7 +77,7 @@ class PdfService {
                       ),
                     ),
                     pw.Text(
-                      '${plan.sheetWidth.toInt()} x ${plan.sheetHeight.toInt()} mm',
+                      '${(plan.sheetWidth / 10).toStringAsFixed(1)} x ${(plan.sheetHeight / 10).toStringAsFixed(1)} cm',
                       style: const pw.TextStyle(fontSize: 12),
                     ),
                   ],
@@ -148,8 +148,8 @@ class PdfService {
                   ),
                   children: [
                     _buildTableHeader('No'),
-                    _buildTableHeader('En (mm)'),
-                    _buildTableHeader('Boy (mm)'),
+                    _buildTableHeader('En (cm)'),
+                    _buildTableHeader('Boy (cm)'),
                     _buildTableHeader('Adet'),
                     _buildTableHeader('Bantlı'),
                     _buildTableHeader('Alan (m²)'),

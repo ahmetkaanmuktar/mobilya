@@ -1,7 +1,7 @@
 class Piece {
   final String id;
-  final double width; // En (mm)
-  final double height; // Boy (mm)
+  final double width; // En (mm - içeride cm olarak gösterilir)
+  final double height; // Boy (mm - içeride cm olarak gösterilir)
   final bool isBanded; // Bantlı mı?
   final int quantity; // Adet
   

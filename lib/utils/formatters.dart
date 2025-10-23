@@ -29,9 +29,10 @@ class Formatters {
     return formatter.format(date);
   }
   
-  // Ölçü formatı (mm)
+  // Ölçü formatı (cm)
   static String formatDimension(double dimension) {
-    return '${dimension.toInt()} mm';
+    // mm'den cm'ye çevir (10'a böl)
+    return '${(dimension / 10).toStringAsFixed(1)} cm';
   }
   
   // Para formatı (opsiyonel, gelecek özellikler için)

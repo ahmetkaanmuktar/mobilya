@@ -84,7 +84,7 @@ class CuttingLayoutWidget extends StatelessWidget {
               ),
               const SizedBox(width: 8),
               Text(
-                '${plan.sheetWidth.toInt()} x ${plan.sheetHeight.toInt()} mm',
+                '${(plan.sheetWidth / 10).toStringAsFixed(1)} x ${(plan.sheetHeight / 10).toStringAsFixed(1)} cm',
                 style: TextStyle(
                   color: Colors.grey[600],
                   fontSize: 12,
